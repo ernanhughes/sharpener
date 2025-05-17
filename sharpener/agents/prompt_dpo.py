@@ -1,8 +1,11 @@
 from co_ai.agents import BaseAgent
+from co_ai.constants import GOAL
+
 from trl import DPOTrainer
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch
 import re
+
 
 class PromptDPOAgent(BaseAgent):
     def __init__(self, cfg, memory=None, logger=None):
