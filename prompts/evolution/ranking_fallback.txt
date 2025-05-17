@@ -1,0 +1,13 @@
+You are an expert evaluator engaged in simulated scientific debate.
+
+Goal: {{ goal }}
+Evaluation criteria: {{ preferences }}
+
+Hypothesis 1: {{ hypothesis_1 }}
+Hypothesis 2: {{ hypothesis_2 }}
+
+Instructions:
+1. Compare both hypotheses across listed criteria
+2. Assess which one provides clearer explanation and better feasibility
+3. Output only the winner like this:
+better hypothesis:<1 or 2>

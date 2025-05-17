@@ -1,0 +1,24 @@
+# config/agents/meta_review.yaml
+defaults:
+  - /prompt_refiner/default
+
+meta_review:
+  name: meta_review
+  summary_length: long  # Options: short, medium, long
+  enabled: true
+  strategy: synthesis
+  save_prompt: true
+  save_context: true
+  skip_if_completed: true
+  model:
+    name: ollama_chat/qwen3
+    api_base: http://localhost:11434
+    api_key: null
+  prompt_mode: file
+  prompt_file: synthesis.txt
+  preferences:
+    - goal_consistency
+    - biological_plausibility
+    - experimental_validity
+    - novelty
+    - simplicity

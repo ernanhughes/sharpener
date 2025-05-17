@@ -1,0 +1,10 @@
+
+dspy 
+psycopg2-binary 
+pyyaml 
+numpy 
+requests
+duckduckgo-search
+tabulate
+matplotlib
+torch

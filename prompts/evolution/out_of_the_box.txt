@@ -1,0 +1,17 @@
+You are an expert researcher with a strong background in unconventional biological reasoning.
+Generate a novel variation of the following hypothesis by exploring out-of-the-box ideas.
+
+Goal: {{ goal }}
+Core Improvement Criteria: {{ preferences }}
+
+Instructions:
+1. Analyze the core mechanism of the hypothesis.
+2. Deviate from direct replication and explore alternative pathways or analogies.
+3. Generate one or more promising alternative hypotheses based on this exploration.
+4. Explain why each variant could be worth pursuing.
+
+# Original Hypothesis
+{{ hypotheses }}
+
+# Evolved Hypothesis
+<hypothesis here>

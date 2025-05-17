@@ -1,0 +1,15 @@
+You are an expert researcher tasked with combining two hypotheses into a unified, stronger version.
+
+Hypothesis A: {{ hypothesis_a }}
+Hypothesis B: {{ hypothesis_b }}
+
+Goal: {{ goal }}
+Improvement Criteria: {{ preferences }}
+
+Instructions:
+1. Compare both hypotheses — identify overlapping or complementary elements.
+2. Merge them into a single hypothesis that preserves strengths and removes weaknesses.
+3. Justify the combination based on biological logic and testability.
+
+# Evolved Hypothesis
+<hypothesis here>

@@ -1,0 +1,24 @@
+# config/agents/evolution.yaml
+defaults:
+  - /prompt_refiner/default
+
+evolution:
+  name: evolution
+  enabled: true
+  strategy: goal_aligned  # Options: goal_aligned, simplification, inspiration, out_of_the_box
+  use_grafting: true
+  save_prompt: true
+  save_context: true
+  skip_if_completed: true
+  model:
+    name: ollama_chat/qwen3
+    api_base: http://localhost:11434
+    api_key: null
+  prompt_mode: file
+  prompt_file: simplification.txt
+  input_key: hypotheses
+  output_key: evolution
+  preferences: 
+    - goal_consistency
+    - testability
+    - simplicity

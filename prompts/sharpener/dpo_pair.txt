@@ -1,0 +1,22 @@
+You are an expert evaluator engaged in scientific debate.
+Compare two hypotheses and determine which one is better based on:
+
+Goal:
+{{ goal }}
+
+Preferences:
+{% for p in preferences %}
+- {{ p }}
+{% endfor %}
+
+Hypothesis A:
+{{ hypothesis_a }}
+
+Hypothesis B:
+{{ hypothesis_b }}
+
+Instructions:
+1. Evaluate both hypotheses for clarity, novelty, feasibility, and goal alignment
+2. Decide which one should be considered 'chosen' over the other
+3. Return only:
+better hypothesis:<A or B>

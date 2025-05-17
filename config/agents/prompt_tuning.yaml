@@ -1,0 +1,38 @@
+# config/agents/prompt_tuning.yaml
+defaults:
+  - /prompt_refiner/disabled
+
+prompt_tuning:
+  name: prompt_tuning
+  enabled: true
+  save_context: true
+  skip_if_completed: false
+
+  # Number of sample prompts to use in tuning
+  sample_size: 20
+  # How many prompts to generate once tuned
+  generate_count: 5
+
+  model:
+    name: ollama_chat/qwen3
+    api_base: http://localhost:11434
+    api_key: null
+
+
+  # Required keys for the agent ot effectively process the context
+  required_keys: ["goal", "hypotheses"]   # add nodes
+  # Key that it will iterate over ot generate reflections
+  input_key: "prompts"
+  # Key that it store the results of those reflections
+  output_key: "tuned_prompts"  # change
+
+  save_prompt: true
+  prompt_mode: file
+  strategy:
+  prompt_file: score_prompt.txt
+  # A set of keys that will tune the prompts operation
+  preferences:
+    - goal_consistency
+    - factual
+    - reliable_source
+    - simplicity
